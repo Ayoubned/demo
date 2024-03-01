@@ -30,7 +30,7 @@ This is a demo project showcasing various functionalities and features.
     npm start
     ```
 
-2. Access the application via your web browser at [http://localhost:3000](http://localhost:3000).
+2. Access the application via your web browser at [http://localhost:8080](http://localhost:8080).
 
 ## Features
 
