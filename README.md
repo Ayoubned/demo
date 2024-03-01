@@ -1,4 +1,4 @@
-# Demo Project
+# ILOG Project
 
 This is a demo project showcasing various functionalities and features.
 
