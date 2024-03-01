@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	rel="stylesheet">
+<link href="styles.css" rel="stylesheet">
+
+<title>Log in</title>
+</head>
+<body>
+	<div id="header"></div>
+	<div class="center-box">
+		<div class="login-box" style="background-color: #cacaca">
+			<h2 class="text-center">Login</h2>
+			<form id="loginForm">
+				<!-- Updated form ID -->
+				<div class="form-group">
+					<label for="username">Username</label>
+					<!-- Updated for and id to match LoginView.js -->
+					<input type="text" class="form-control" id="username"
+						aria-describedby="Username" placeholder="Enter email">
+				</div>
+				<div class="form-group">
+					<label for="password">Password</label>
+					<!-- Updated for and id to match LoginView.js -->
+					<input type="password" class="form-control" id="password"
+						placeholder="Password">
+				</div>
+				<a href="passrec.html">Password forgotten?</a> <br>
+				<button type="submit" class="btn btn-primary btn-margin" id="submit">Submit</button>
+				<a href="signup.html" class="btn btn-secondary btn-margin">Don't
+					have an account? Sign up instead</a>
+			</form>
+		</div>
+	</div>
+
+	<div id="footer"></div>
+	<!-- Load jQuery before using it -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="script.js"></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script src="Modeljs/LoginModel.js"></script>
+	<script src="Viewjs/LoginView.js"></script>
+	<script src="Controllerjs/LoginController.js"></script>
+	<script src="Servicejs/LoginService.js"></script>
+
+
+
+
+</body>
+</html>

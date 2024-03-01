@@ -1,0 +1,97 @@
+body{
+    font-family: 'Poppins', sans-serif;
+	font-weight: 400;
+	font-size:14px;
+	color:#888;
+	display: flex;
+    flex-direction: column;
+    background-image: url("bg3.jpg");
+}
+html, body {
+     height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-bot: fill;
+}
+footer {
+    margin-top: fill;
+
+}
+
+#select{
+	font-size: x-large;
+}
+h1,h2{
+	 color: black;
+}
+#b1{
+	font-size: x-large;
+}
+img{
+	width: 50px; 
+	height: 50px;
+}
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh; /* Adjust the minimum height to leave space for the footer */
+  margin-bottom: 20px; /* Add margin at the bottom for the footer */
+}
+
+.signup-box {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.login-box {
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.btn-margin {
+  margin-top: 10px;
+}
+.btn-margi {
+  margin-bottom: 125px;
+}
+.mar {
+  margin-bottom: 100px;
+}
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url('star.png'); /* Replace 'star-empty.png' with your empty star image URL */
+  background-size: cover;
+  transition: background-image 0.2s; /* Add a transition for smooth animation */
+}
+
+.rating label:hover,
+.rating input:checked + label {
+  background-image: url('star-filled.png'); /* Replace 'star-filled.png' with your filled star image URL */
+}
+
+#ratingValue {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+img {
+  width: 300px;
+  height: 300px;
+}
+.card {
+  margin-bottom: 20px;
+}

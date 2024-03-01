@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>header</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+      
+
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		    <a class="navbar-brand" href="index.html"><img alt="#" src="logo.png" style="width: 50px; height: 50px;" ></a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		        <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarNav">
+		        <ul class="navbar-nav">
+		            <li class="nav-item">
+		                <a class="nav-link" href="service1.html">Material Lending</a>
+		            </li>
+		            <li class="nav-item">
+		                <a class="nav-link" href="service2.html">Event Management</a>
+		            </li>
+
+		        </ul>
+
+		    <ul class="navbar-nav ml-auto" id="userLinks">
+		        <li class="nav-item">
+		            <a class="nav-link" href="signup.html">Sign Up</a>
+		        </li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="login.html">Log In</a>
+		        </li>
+
+		    </ul>
+		    <ul class="navbar-nav ml-auto d-none" id="userIcon">
+		      <li class="nav-item">
+        				<a class="nav-link" href="Reservation.html">My Reservations</a>
+    				</li>
+    				    <li class="nav-item">
+        				<a class="nav-link" href="Myevents.html">My Events</a>
+    				</li>
+		        <li class="nav-item">
+		            <a class="nav-link" href="profile.html">
+		            <span id="usernameDisplay"></span>
+		                <img src="user.png" alt="usericon" class="img-fluid mr-1" style="width: 24px; height: 24px;">
+		                <i class="fas fa-user"></i>
+		            </a>
+		        </li>
+		        <li class="nav-item">
+		            <button class="btn btn-link nav-link" onclick="logout()">Log Out</button>
+		            </li>
+		                 
+		        </ul>
+		        		     
+		    </div>
+		</nav>
+		
+		<script>
+		document.addEventListener('DOMContentLoaded', function() {
+		    var isLoggedIn = sessionStorage.getItem('isLoggedIn');
+		    var username = sessionStorage.getItem("username"); // Retrieve the username
+		    var userLinks = document.getElementById('userLinks');
+		    var userIcon = document.getElementById('userIcon');
+		    var usernameDisplay = document.getElementById('usernameDisplay');
+		    if (isLoggedIn) {
+		        userLinks.classList.add('d-none');
+		        userIcon.classList.remove('d-none');
+		        usernameDisplay.textContent = username; 
+		    } else {
+		        userLinks.classList.remove('d-none');
+		        userIcon.classList.add('d-none');
+		    }
+		    
+		});
+
+		</script>
+
+      
+  </body>
+</html>

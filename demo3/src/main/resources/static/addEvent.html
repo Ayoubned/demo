@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+    
+    <div class="container mt-5">
+        <h2>Create or Edit an Event</h2>
+    <form id="eventForm">
+    <div class="form-group">
+        <label for="eventName">Event Name:</label>
+        <input type="text" class="form-control" id="eventName" name="eventName" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="eventDate">Date:</label>
+        <input type="date" class="form-control" id="eventDate" name="eventDate" required>
+    </div>
+
+    <div class="form-group">
+        <label for="eventTime">Time:</label>
+        <input type="time" class="form-control" id="eventTime" name="eventTime" required>
+    </div>
+
+    <div class="form-group">
+        <label for="eventLocation">Location:</label>
+        <input type="text" class="form-control" id="eventLocation" name="eventLocation" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save Event</button>
+</form>
+
+    </div>
+    
+    <div class="container mt-5">
+        <h2>Invite Members</h2>
+        <form id="inviteForm">
+            <!-- Select input field to invite members -->
+            <label for="inviteMembers">Select Members to Invite:</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            
+            <!-- Add more input fields or buttons for inviting members -->
+            
+            <button type="submit" class="btn btn-primary">Send Invitations</button>
+        </form>
+    </div>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+    <script src="Modeljs/EventModel.js"></script>
+    <script src="Servicejs/CreateEventService.js"></script>
+    <script src="Viewjs/CreateEventView.js"></script>
+    <script src="Controllerjs/CreateEventController.js"></script>
+</body>
+</html>

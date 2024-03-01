@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Page</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+   <div id="header"></div>
+
+    <div class="container mt-5">
+        <h2>My Reservations</h2>
+        <h2>Filtres</h2>
+        <div class="row mb-4">
+            <div class="col">
+                <input type="text" class="form-control" id="nameFilter" oninput="filterTable('nameFilter', 'ratingFilter')" placeholder="Filter by Equipment Name">
+            </div>
+        </div>
+
+<div id="productContainer1" class="row"></div>
+</div>
+    <div id="footer"></div>
+
+    <!-- Include MVC JS files -->
+    <script src="Modeljs/rmodel.js"></script>
+    <script src="Servicejs/rservice.js"></script>
+    <script src="Viewjs/rview.js"></script>
+    <script src="Controllerjs/rcontroller.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Events</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="container mt-5">
+        <h2>My Events</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Location</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="eventsTableBody">
+                <!-- Events will be loaded here -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <script> $(document).ready(function() {
+        if(sessionStorage.getItem("isLoggedIn") === "true") {
+            var userId = sessionStorage.getItem("userId");
+
+            $.ajax({
+                url: `/api/eventJoining/user/${userId}`, // Update with your API endpoint
+                type: 'GET',
+                success: function(eventJoinings) {
+                    eventJoinings.forEach(function(eventJoining) {
+                        // Assuming eventJoining has event details. Adjust according to your API response.
+                        $('#eventsTableBody').append(`
+                            <tr>
+                                <td>${eventJoining.event.name}</td>
+                                <td>${eventJoining.event.date}</td>
+                                <td>${eventJoining.event.time}</td>
+                                <td>${eventJoining.event.location}</td>
+                                <td>
+                                    <!-- Add any action buttons here -->
+                                </td>
+                            </tr>
+                        `);
+                    });
+                },
+                error: function() {
+                    alert('Error fetching my events');
+                }
+            });
+        } else {
+            window.location.href = 'login.html'; // Redirect to login if not logged in
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Lending Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+<div id="header"></div>
+
+<div class="container mt-5">
+    <h1 class="mt-5">List an Item</h1>
+    <form id="listing">
+        <input type="hidden" id="id" name="id" value="-1">
+        <label class="form-label" for="name">Equipment name: </label>
+        <input class="form-control" type="text" id="name" name="name" required>
+        <label class="form-label" for="rating">rating: </label>
+        <input class="form-control" type="text" id="rating" name="rating" required>
+        <label class="form-label" for="description">description: </label>
+        <input class="form-control" type="text" id="description" name="description" required>
+        <label class="form-label" for="photo">Photo : </label>
+        <input class="form-control" type="file" id="photo" name="photo">
+        <button type="submit" class="btn btn-primary btn-margin">Submit</button>
+        <a href="service1.html" class="btn btn-primary btn-margin">available items</a>
+    </form>
+</div>
+<div id="footer"></div>
+
+<!-- Load jQuery before using it -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="Modeljs/EquipmentModel.js"></script>
+<script src="Viewjs/EquipmentView.js"></script>
+<script src="Servicejs/EquipmentService.js"></script>
+<script src="Controllerjs/EquipmentController.js"></script>
+
+</body>
+</html>
